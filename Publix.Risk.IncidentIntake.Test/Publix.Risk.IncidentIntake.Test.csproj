@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.15" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.16" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.16" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.16" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.16" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Publix.Risk.IncidentIntake.Application\Publix.Risk.IncidentIntake.Application.csproj" />
+    <ProjectReference Include="..\Publix.Risk.IncidentIntake.Domain\Publix.Risk.IncidentIntake.Domain.csproj" />
+    <ProjectReference Include="..\Publix.Risk.IncidentIntake.Persistence\Publix.Risk.IncidentIntake.Persistence.csproj" />
+    <ProjectReference Include="..\Publix.Risk.IncidentIntake.UI\Publix.Risk.IncidentIntake.UI.csproj" />
+  </ItemGroup>
+
+</Project>

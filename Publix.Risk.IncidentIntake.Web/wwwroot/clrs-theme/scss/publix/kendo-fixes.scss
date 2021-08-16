@@ -1,0 +1,49 @@
+﻿// Fix Kendo grid toolbar from not having styling.
+.k-header.k-grid-toolbar {
+    @extend .k-grid-header;
+    @extend .p-2;
+}
+
+// Remove icons from Kendo buttons.
+.k-command-cell .k-button span.k-icon {
+    display: none;
+}
+.k-edit-form-container .k-button span.k-icon {
+    display: none;
+}
+
+// Change the delete button to be a outlined button.
+.k-button.k-grid-delete {
+    @extend .btn-outline-danger;
+}
+
+.k-upload {
+    .k-action-buttons {
+        margin: 0px;
+    }
+}
+
+.k-popup-edit-form {
+    .k-edit-field > .text-box, select, .check-box {
+        @extend .form-control;
+    }
+
+    .k-edit-buttons {
+        display: flex;
+        flex-direction: row-reverse;
+
+        a {
+            margin-left: .5rem;
+        }
+    }
+}
+
+.k-grid {
+    .k-grid-norecords-template {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+    }
+}

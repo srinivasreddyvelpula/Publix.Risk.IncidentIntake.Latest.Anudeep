@@ -1,0 +1,61 @@
+﻿<!--Other Associates Modal Popup-->
+<div class="modal fade" id="otherAssociatesModal" tabindex="-1" role="dialog" aria-labelledby="otherAssociatesModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center" style="background-color:green;">
+                <h5 class="modal-title text-center" id="otherAssociatesModalTitle"><strong style="color:white;">Associate Injury Persons Involved</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form>
+                        <h6>Associate Information</h6>
+                        <hr />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>PERNR</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" class="form-control" placeholder="PERNR">
+                            </div>
+                            <div class="col-1">
+                                <button id="search-button" type="button" class="btn btn-primary" style="background-color:darkgray;">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-form-label col-3">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Invlovement Type</label>
+                            </div>
+                            <div class="col-3">
+                                <select name="location" id="yesorno" class="form-control">
+                                    <option value="volvo">First On Scene</option>
+                                    <option value="volvo">Invloved In Incident</option>
+                                    <option value="volvo">Manager In Charge</option>
+                                    <option value="volvo">Responsible For Area/Section</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button type="button" class="btn btn-primary btn-lg" style="background-color:darkgray;">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Other Associates Modal Popup-->

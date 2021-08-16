@@ -1,0 +1,75 @@
+/*
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace ConsoleApp
+{
+    /// <summary>
+    /// A port of Kendo's embed-dependencies file to C#
+    /// to work without requiring a node_module folder.
+    /// 
+    /// Needs to be written in C# because powershell was having
+    /// permissions issues.
+    /// </summary>
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Starting");
+
+            var basePath = @"\components\clrs-theme\lib\kendo-themes\bootstrap\scss";
+
+            ReplaceContents(basePath, 0, @"~@progress/kendo-theme-default/scss", @"../../default/scss");
+            ReplaceContents(basePath, 1, @"~@progress/kendo-theme-default/scss", @"../../../default/scss");
+            ReplaceContents(basePath, 2, @"~@progress/kendo-theme-default/scss", @"../../../../default/scss");
+            ReplaceContents(basePath, 3, @"~@progress/kendo-theme-default/scss", @"../../../../../default/scss");
+
+            ReplaceContents(basePath, 0, @"~bootstrap/scss", @"../../../bootstrap-4.6.0/scss");
+
+            Console.WriteLine("Done");
+            Console.ReadLine();
+        }
+
+        static void ReplaceContents(string path, int maxDepth, string find, string replace)
+        {
+            Console.WriteLine(string.Empty);
+            Console.WriteLine($"ReplaceContents('{path}', {maxDepth}, '{find}', '{replace}')");
+            Console.WriteLine(string.Empty);
+
+            foreach (var filePath in GetFiles(path, maxDepth))
+            {
+                var contents = File.ReadAllText(filePath);
+                if (contents.Contains(find))
+                {
+                    contents = contents.Replace(find, replace);
+                    File.WriteAllText(filePath, contents);
+
+                    Console.WriteLine($"Processing file...    {filePath}  [YES]");
+                }
+                else
+                {
+                    Console.WriteLine($"Processing file...    {filePath}  [NO]");
+                }
+            }
+        }
+
+        static List<string> GetFiles(string root, int depth)
+        {
+            var list = new List<string>();
+
+            foreach (var directory in Directory.EnumerateDirectories(root))
+            {
+                if (depth > 0)
+                {
+                    list.AddRange(GetFiles(directory, depth - 1));
+                }
+            }
+
+            list.AddRange(Directory.EnumerateFiles(root));
+
+            return list;
+        }
+    }
+}
+*/

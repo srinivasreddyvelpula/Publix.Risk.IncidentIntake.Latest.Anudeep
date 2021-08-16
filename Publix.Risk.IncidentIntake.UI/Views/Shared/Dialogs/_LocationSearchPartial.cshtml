@@ -1,0 +1,66 @@
+﻿<!--Location search Modal Popup-->
+<div class="modal fade" id="locationSearchModal" tabindex="-1" role="dialog" aria-labelledby="locationSearchModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center" style="background-color:green;">
+                <h5 class="modal-title text-center" id="locationSearchModalTitle"><strong style="color:white;">Location Search</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <span>Search by any combination of following:</span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-form-label col-2">
+                            <label>Location Description</label>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" placeholder="Location">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-form-label col-2">
+                            <label>City</label>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-control" placeholder="City">
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-form-label col-2">
+                            <label>State</label>
+                        </div>
+                        <div class="col-4">
+                            <select class="form-control">
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <span><strong><br />Use '*' in the Location Description and City fields for wildcard search.</strong></span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button type="button" class="btn btn-primary btn-lg" style="background-color:green;" data-toggle="modal" data-target="#locationSearchResultModal" id="locationSearchBtn" data-dismiss="modal">Search</button>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Location search Modal Popup-->

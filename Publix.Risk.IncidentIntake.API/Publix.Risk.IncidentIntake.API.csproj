@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <Company>Publix Supermarkets, Inc.</Company>
+    <Product>Incident Intake</Product>
+    <Copyright>2021</Copyright>
+    <PackageIcon>publix_logo.png</PackageIcon>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Publix.Risk.IncidentIntake.API.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.2.3" />
+    <PackageReference Include="itext7" Version="7.1.15" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Graph" Version="3.35.0" />
+    <PackageReference Include="Microsoft.Graph.Core" Version="1.25.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Publix.Risk.IncidentIntake.Application.Core\Publix.Risk.IncidentIntake.Application.Core.csproj" />
+    <ProjectReference Include="..\Publix.Risk.IncidentIntake.Domain.Core\Publix.Risk.IncidentIntake.Domain.Core.csproj" />
+    <ProjectReference Include="..\Publix.Risk.IncidentIntake.Infrastructure.Core\Publix.Risk.IncidentIntake.Infrastructure.Core.csproj" />
+    <ProjectReference Include="..\Publix.Risk.IncidentIntake.Persistence.Core\Publix.Risk.IncidentIntake.Persistence.Core.csproj" />
+  </ItemGroup>
+
+
+</Project>

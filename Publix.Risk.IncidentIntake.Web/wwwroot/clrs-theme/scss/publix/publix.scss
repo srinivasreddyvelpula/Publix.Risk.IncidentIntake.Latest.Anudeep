@@ -1,0 +1,101 @@
+// These two IDs are for aligning the Publix menu.
+// Calculations on the appname are based off of the logo placement.
+// Publix logo is hidden on mobile.
+#publix-header {
+    background-color: $primary;
+
+    @extend .text-white;
+    @extend .small;
+    padding-bottom: 16px;
+    @extend .py-md-2;
+}
+
+#publix-navbar > #publix-navbar-brand-image {
+    display: none;
+
+    @include media-breakpoint-up($navbar-expand-on) {
+        display: initial;
+        position: absolute;
+        top: -20px;
+        width: 64px;
+        height: 64px;
+    }
+}
+
+#publix-navbar > #publix-navbar-brand-name {
+    color: $black;
+    font-size: 18px;
+
+    @include media-breakpoint-up($navbar-expand-on) {
+        font-size: 20px;
+        margin-left: 72px;
+        margin-right: 48px;
+    }
+}
+
+#publix-navbar .nav-item {
+    @extend .mr-3;
+}
+
+#publix-navbar > #publix-navbar-mobile-menu-button {
+    display: none;
+
+    @include media-breakpoint-down($navbar-expand-on) {
+        display: initial;
+    }
+}
+
+main {
+    margin-top: 28px;
+}
+
+/* ********************* */
+/*     Sticky Footer     */
+/* ********************* */
+$footer-height: 48;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+main {
+    margin-bottom: #{$footer-height * 2}px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: #{$footer-height}px;
+    line-height: #{$footer-height}px;
+    background-color: $gray-200;
+}
+
+/* ********************* */
+/*        Vue.js         */
+/* ********************* */
+[v-cloak] {
+    display: none
+}
+
+/* *********************** */
+/*  Cascading Navbar Menu  */
+/* *********************** */
+.dropdown .dropdown-menu .caretright::after {
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+.dropdown .dropdown-menu .dropright {
+    @extend .mt-0;
+    top: calc(100% - 3em);
+    right: auto;
+    left: 100%;
+}
+
+/* *********************** */
+/*     Required Fields     */
+/* *********************** */
+.field-required:after {
+    content: "*"
+}

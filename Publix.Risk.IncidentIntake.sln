@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publix.Risk.IncidentIntake.Persistence", "Publix.Risk.IncidentIntake.Persistence\Publix.Risk.IncidentIntake.Persistence.csproj", "{7826873C-584A-4031-9DDB-F72BF97675E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publix.Risk.IncidentIntake.Domain", "Publix.Risk.IncidentIntake.Domain\Publix.Risk.IncidentIntake.Domain.csproj", "{45A184BB-AF59-4E34-8F49-EF1E7EC3C5AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publix.Risk.IncidentIntake.UI", "Publix.Risk.IncidentIntake.UI\Publix.Risk.IncidentIntake.UI.csproj", "{9D9FCC41-525E-41C3-810C-FEFCA34EC07E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publix.Risk.IncidentIntake.Tests.Unit", "Publix.Risk.IncidentIntake.Tests.Unit\Publix.Risk.IncidentIntake.Tests.Unit.csproj", "{A5B91AB1-0507-4602-930F-3C8EFB072115}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publix.Risk.IncidentIntake.Tests.Integration", "Publix.Risk.IncidentIntake.Tests.Integration\Publix.Risk.IncidentIntake.Tests.Integration.csproj", "{578A996E-6C56-4D32-8E52-DADE770FE84D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6479778B-E48A-471F-A867-0C1ACE998E7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7826873C-584A-4031-9DDB-F72BF97675E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7826873C-584A-4031-9DDB-F72BF97675E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7826873C-584A-4031-9DDB-F72BF97675E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7826873C-584A-4031-9DDB-F72BF97675E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A184BB-AF59-4E34-8F49-EF1E7EC3C5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A184BB-AF59-4E34-8F49-EF1E7EC3C5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A184BB-AF59-4E34-8F49-EF1E7EC3C5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A184BB-AF59-4E34-8F49-EF1E7EC3C5AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9FCC41-525E-41C3-810C-FEFCA34EC07E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D9FCC41-525E-41C3-810C-FEFCA34EC07E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D9FCC41-525E-41C3-810C-FEFCA34EC07E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D9FCC41-525E-41C3-810C-FEFCA34EC07E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B91AB1-0507-4602-930F-3C8EFB072115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B91AB1-0507-4602-930F-3C8EFB072115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B91AB1-0507-4602-930F-3C8EFB072115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B91AB1-0507-4602-930F-3C8EFB072115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{578A996E-6C56-4D32-8E52-DADE770FE84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578A996E-6C56-4D32-8E52-DADE770FE84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578A996E-6C56-4D32-8E52-DADE770FE84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578A996E-6C56-4D32-8E52-DADE770FE84D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5B91AB1-0507-4602-930F-3C8EFB072115} = {6479778B-E48A-471F-A867-0C1ACE998E7A}
+		{578A996E-6C56-4D32-8E52-DADE770FE84D} = {6479778B-E48A-471F-A867-0C1ACE998E7A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {710BF070-37A6-4649-A64F-E16649BB3552}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfss:444/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Publix.Risk.IncidentIntake.UI\\Publix.Risk.IncidentIntake.UI.csproj
+		SccProjectName1 = Publix.Risk.IncidentIntake.UI
+		SccLocalPath1 = Publix.Risk.IncidentIntake.UI
+		SccProjectUniqueName2 = Publix.Risk.IncidentIntake.Persistence\\Publix.Risk.IncidentIntake.Persistence.csproj
+		SccProjectName2 = Publix.Risk.IncidentIntake.Persistence
+		SccLocalPath2 = Publix.Risk.IncidentIntake.Persistence
+		SccProjectUniqueName3 = Publix.Risk.IncidentIntake.Domain\\Publix.Risk.IncidentIntake.Domain.csproj
+		SccProjectName3 = Publix.Risk.IncidentIntake.Domain
+		SccLocalPath3 = Publix.Risk.IncidentIntake.Domain
+		SccProjectUniqueName4 = Publix.Risk.IncidentIntake.Tests.Unit\\Publix.Risk.IncidentIntake.Tests.Unit.csproj
+		SccProjectTopLevelParentUniqueName4 = Publix.Risk.IncidentIntake.sln
+		SccProjectName4 = Publix.Risk.IncidentIntake.Tests.Unit
+		SccLocalPath4 = Publix.Risk.IncidentIntake.Tests.Unit
+		SccProjectUniqueName5 = Publix.Risk.IncidentIntake.Tests.Integration\\Publix.Risk.IncidentIntake.Tests.Integration.csproj
+		SccProjectTopLevelParentUniqueName5 = Publix.Risk.IncidentIntake.sln
+		SccProjectName5 = Publix.Risk.IncidentIntake.Tests.Integration
+		SccLocalPath5 = Publix.Risk.IncidentIntake.Tests.Integration
+	EndGlobalSection
+EndGlobal

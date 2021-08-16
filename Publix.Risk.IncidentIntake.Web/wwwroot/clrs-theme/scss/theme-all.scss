@@ -1,0 +1,14 @@
+﻿// Font Awesome
+@import "../lib/fontawesome-free-5.15.3-web/scss/fontawesome";
+@import "../lib/fontawesome-free-5.15.3-web/scss/solid";
+@import "../lib/fontawesome-free-5.15.3-web/scss/brands";
+
+// Bootstrap
+@import "../lib/bootstrap-4.6.0/scss/bootstrap";
+
+// Publix Theme
+@import "./publix/publix";
+
+// Kendo
+@import "../lib/kendo-themes/bootstrap/scss/all";
+@import "../scss/publix/kendo-fixes";

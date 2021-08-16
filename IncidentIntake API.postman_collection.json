@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "9ab25e87-99c6-402f-b2ac-47d11b953ba5",
+		"name": "IncidentIntake API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Codes List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Get Codes List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:37015/api/codes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "37015",
+							"path": [
+								"api",
+								"codes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "4347"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Jun 2021 20:17:19 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 1090,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Accident Type\",\n        \"codeTypeId\": 100,\n        \"description\": null,\n        \"value\": 100\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 1021,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Body Part\",\n        \"codeTypeId\": 200,\n        \"description\": null,\n        \"value\": 200\n    },\n    {\n        \"listType\": \"Filtered\",\n        \"tableId\": 1026,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Injury Type\",\n        \"codeTypeId\": 300,\n        \"description\": null,\n        \"value\": 300\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2073,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Injury Source\",\n        \"codeTypeId\": 400,\n        \"description\": null,\n        \"value\": 400\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2066,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Injury Cause\",\n        \"codeTypeId\": 500,\n        \"description\": null,\n        \"value\": 500\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2069,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Involvement Types\",\n        \"codeTypeId\": 600,\n        \"description\": null,\n        \"value\": 600\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2045,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Product Category\",\n        \"codeTypeId\": 700,\n        \"description\": null,\n        \"value\": 700\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2037,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Time of Day\",\n        \"codeTypeId\": 800,\n        \"description\": null,\n        \"value\": 800\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2036,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Weather Condition\",\n        \"codeTypeId\": 900,\n        \"description\": null,\n        \"value\": 900\n    },\n    {\n        \"listType\": \"Hierarchical\",\n        \"tableId\": 0,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Locations\",\n        \"codeTypeId\": 1000,\n        \"description\": null,\n        \"value\": 1000\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 1059,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Vehicle Type\",\n        \"codeTypeId\": 1100,\n        \"description\": null,\n        \"value\": 1100\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2070,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Shifts\",\n        \"codeTypeId\": 1200,\n        \"description\": null,\n        \"value\": 1200\n    },\n    {\n        \"listType\": \"Filtered\",\n        \"tableId\": 2078,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Activities\",\n        \"codeTypeId\": 1300,\n        \"description\": null,\n        \"value\": 1300\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 1028,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Inside Outside\",\n        \"codeTypeId\": 1400,\n        \"description\": null,\n        \"value\": 1400\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 1012,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Department\",\n        \"codeTypeId\": 1500,\n        \"description\": null,\n        \"value\": 1500\n    },\n    {\n        \"listType\": \"Filtered\",\n        \"tableId\": 2032,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Incident Location\",\n        \"codeTypeId\": 1600,\n        \"description\": null,\n        \"value\": 1600\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 1023,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Claim Type\",\n        \"codeTypeId\": 1700,\n        \"description\": null,\n        \"value\": 1700\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2104,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Incident Type\",\n        \"codeTypeId\": 1800,\n        \"description\": null,\n        \"value\": 1800\n    },\n    {\n        \"listType\": \"Filtered\",\n        \"tableId\": 2049,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Flood Type\",\n        \"codeTypeId\": 1900,\n        \"description\": null,\n        \"value\": 1900\n    },\n    {\n        \"listType\": \"Filtered\",\n        \"tableId\": 2055,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Location Equipment\",\n        \"codeTypeId\": 2000,\n        \"description\": null,\n        \"value\": 2000\n    },\n    {\n        \"listType\": \"Filtered\",\n        \"tableId\": 2056,\n        \"filterId\": 2096,\n        \"codes\": [],\n        \"name\": \"Chemicals\",\n        \"codeTypeId\": 2100,\n        \"description\": null,\n        \"value\": 2100\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2048,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Floor Color\",\n        \"codeTypeId\": 2200,\n        \"description\": null,\n        \"value\": 2200\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2034,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Trip Type\",\n        \"codeTypeId\": 2300,\n        \"description\": null,\n        \"value\": 2300\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2035,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Struck By Objects\",\n        \"codeTypeId\": 2400,\n        \"description\": null,\n        \"value\": 2400\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2044,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Notification Method\",\n        \"codeTypeId\": 2500,\n        \"description\": null,\n        \"value\": 2500\n    },\n    {\n        \"listType\": \"Filtered\",\n        \"tableId\": 0,\n        \"filterId\": 2044,\n        \"codes\": [],\n        \"name\": \"Products\",\n        \"codeTypeId\": 2600,\n        \"description\": null,\n        \"value\": 2600\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2139,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Close Method\",\n        \"codeTypeId\": 2700,\n        \"description\": null,\n        \"value\": 2700\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2062,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Rx Type\",\n        \"codeTypeId\": 2800,\n        \"description\": null,\n        \"value\": 2800\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2063,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Transmit Methods\",\n        \"codeTypeId\": 2900,\n        \"description\": null,\n        \"value\": 2900\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 2064,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Discovery Method\",\n        \"codeTypeId\": 3000,\n        \"description\": null,\n        \"value\": 3000\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 1033,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Sex\",\n        \"codeTypeId\": 3100,\n        \"description\": null,\n        \"value\": 3100\n    },\n    {\n        \"listType\": \"Simple\",\n        \"tableId\": 1772,\n        \"filterId\": null,\n        \"codes\": [],\n        \"name\": \"Country\",\n        \"codeTypeId\": 3200,\n        \"description\": null,\n        \"value\": 3200\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Specific Code Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

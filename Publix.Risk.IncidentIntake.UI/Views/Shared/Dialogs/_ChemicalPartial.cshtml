@@ -1,0 +1,48 @@
+﻿<!--Chemical Modal Popup-->
+<div class="modal fade" id="chemicalModal" tabindex="-1" role="dialog" aria-labelledby="chemicalModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center" style="background-color:green;">
+                <h5 class="modal-title text-center" id="chemicalModalTitle"><strong style="color:white;">Chemical</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Chemical</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="col-1">
+                                <button id="search-button" type="button" class="btn btn-primary" style="background-color:darkgray;" data-toggle="modal" data-target="#codeSearchResultModal" data-dismiss="modal">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Manufacturer</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button type="button" class="btn btn-primary btn-lg" style="background-color:darkgray;">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Chemical search Modal Popup-->

@@ -1,0 +1,203 @@
+﻿<div class="modal fade" id="injuredAssociateModal" tabindex="-1" role="dialog" aria-labelledby="injuredAssociateModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center" style="background-color:green;">
+                <h5 class="modal-title text-center" id="injuredAssociateModalTitle"><strong style="color:white;">Injured Associate</strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form>
+                        <h6>Associate Information</h6>
+                        <hr />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>PERNR</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" class="form-control" placeholder="PERNR">
+                            </div>
+                            <div class="col-1">
+                                <button id="search-button" type="button" class="btn btn-primary" style="background-color:darkgray;">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="col-form-label col-3">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Primary Language</label>
+                            </div>
+                            <div class="col-3">
+                                <select name="location" id="yesorno" class="form-control">
+                                    <option value="volvo">--SELECT--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr />
+                        <br />
+                        <h6>Work Information</h6>
+                        <hr />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Last Date Worked</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-form-label col-3">
+                                <label>Return To Work Date</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Shift Start Time</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="time" class="form-control">
+                            </div>
+                            <div class="col-form-label col-3">
+                                <label>Last Day Paid Through</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Paid For The Date Of Injury</label>
+                            </div>
+                            <div class="col-3">
+                                <select name="location" id="yesorno" class="form-control">
+                                    <option value="volvo">--SELECT--</option>
+                                    <option value="volvo">YES</option>
+                                    <option value="volvo">NO</option>
+                                </select>
+                            </div>
+                            <div class="col-form-label col-3">
+                                <label>Average Weekly Hours</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Work Days In Week</label>
+                            </div>
+                            <div class="col-3">
+                                <select name="location" id="yesorno" class="form-control">
+                                    <option value="volvo">--SELECT--</option>
+                                    <option value="volvo">1</option>
+                                    <option value="volvo">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr />
+                        <br />
+                        <h6>Injury Information</h6>
+                        <hr />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Injury Description</label>
+                            </div>
+                            <div class="col-4">
+                                <textarea class="form-control" rows="3">Type here..</textarea>
+                            </div>
+                            <div class="col-form-label col-3">
+                                <label>(Note: 500 char limit.)</label>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Fatality</label>
+                            </div>
+                            <div class="col-3">
+                                <select name="location" id="yesorno" class="form-control">
+                                    <option value="volvo">--SELECT--</option>
+                                    <option value="volvo">1</option>
+                                    <option value="volvo">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Body Part's</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Enter Text">
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="btn btn-primary" style="background-color:darkgray">Add</button>
+                                <button type="button" class="btn btn-primary" style="background-color:darkgray">Delete</button>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Nature Of Injury(ies)</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Enter Text">
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="btn btn-primary" style="background-color:darkgray">Add</button>
+                                <button type="button" class="btn btn-primary" style="background-color:darkgray">Delete</button>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Cause Of Injury(ies)</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Enter Text">
+                            </div>
+                            <div class="col-1">
+                                <button id="search-button" type="button" class="btn btn-primary" style="background-color:darkgray;">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-row">
+                            <div class="col-form-label col-3">
+                                <label>Source Of Injury(ies)</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" class="form-control" placeholder="Enter Text">
+                            </div>
+                            <div class="col-1">
+                                <button id="search-button" type="button" class="btn btn-primary" style="background-color:darkgray;">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button type="button" class="btn btn-primary btn-lg" style="background-color:darkgray;">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

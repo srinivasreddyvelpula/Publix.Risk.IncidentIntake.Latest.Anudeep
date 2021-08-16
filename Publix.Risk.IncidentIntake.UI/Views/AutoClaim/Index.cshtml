@@ -1,0 +1,286 @@
+﻿@model Publix.Risk.IncidentIntake.UI.Models.AutoClaimViewModel
+
+
+<style>
+    .modelyear {
+        padding-left: 20px !important;
+    }
+
+    .field-validation-error {
+        color: red;
+    }
+</style>
+@using (Html.BeginForm())
+{
+
+<div style="margin-top:20px">
+    <h4 style="text-align:center">Incident Intake- AutoClaim </h4>
+    <br />
+    <div class="alert alert-warning" role="alert">
+        <strong style="color:burlywood;font-family:Arial;align-content:center">This report is prepared in anticipation of litigation and is privileged and confidential information. Do not share with the customer or anyone outside of publix without authorization from Risk Management.</strong>
+    </div>
+    <br />
+
+    <h4>Vehicle Information </h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Vehicle(s) Involved</label>
+        </div>
+        <div class="col-3">
+            @Html.TextAreaFor(t => t.VehiclesInvolved, 3, 5, new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.VehiclesInvolved, "", new { @class = "txt-danger" })
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" id="btnPrimaryAdd" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Add</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Edit</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Delete</button>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Associate Occupant(s)</label>
+        </div>
+        <div class="col-3">
+            @Html.TextAreaFor(t => t.AssociateOccupants, 3, 5, new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.AssociateOccupants, "", new { @class = "txt-danger" })
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" id="btnAssociatePrimaryAdd" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Add</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Edit</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Delete</button>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Non-Associate Occupant(s)</label>
+        </div>
+        <div class="col-3">
+            @Html.TextAreaFor(t => t.NonAssociateOccupants, 3, 5, new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.NonAssociateOccupants, "", new { @class = "txt-danger" })
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" id="btnNonAssociatePrimaryAdd" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Add</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Edit</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray" data-toggle="modal" data-target="#CartDamageModal">Delete</button>
+        </div>
+    </div>
+
+    <hr />
+    <h4>Person Completing Form</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>PERNR</label>
+        </div>
+        <div class="col-2">
+            @Html.TextBoxFor(t => t.EmpPernr, new { @class = "form-control", placehoder = "PERNR" })
+            @Html.ValidationMessageFor(t => t.EmpPernr, "", new { @class = "txt-danger" })
+        </div>
+        <div class="col-1">
+            <button id="search-button" type="button" class="btn btn-primary" style="background-color:darkgray" data-toggle="modal" data-target="#associateSearchModal">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="col-form-label col-2">
+            <label>Name</label>
+        </div>
+        <div class="col-3">
+            <input id="txtEmpFirstLastName" type="text" class="form-control" disabled="disabled">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Date Reported</label>
+        </div>
+        <div class="col-3">
+            @Html.TextBoxFor(t => t.DateReported, "MM-dd-yyyy", new { @class = "form-control", type = "date" })
+            @Html.ValidationMessageFor(t => t.DateReported, "", new { @class = "txt-danger" })
+
+        </div>
+        <div class="col-form-label col-2">
+            <label>Time Reported</label>
+        </div>
+        <div class="col-3">
+            @Html.TextBoxFor(t => t.TimeReported, new { @class = "form-control", type = "time" })
+            @Html.ValidationMessageFor(t => t.TimeReported, "", new { @class = "txt-danger" })
+        </div>
+    </div>
+
+    <hr />
+    <h4>Incident Information</h4>
+    <hr />
+    <div>
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Date of Incident</label>
+            </div>
+            <div class="col-3">
+                @Html.TextBoxFor(t => t.DateofIncident, "MM-dd-yyyy", new { @class = "form-control", type = "date" })
+                @Html.ValidationMessageFor(t => t.DateofIncident, "", new { @class = "txt-danger" })
+            </div>
+            <div class="col-form-label col-2">
+                <label>Time of Incident</label>
+            </div>
+            <div class="col-3">
+                @Html.TextBoxFor(t => t.TimeofIncident, new { @class = "form-control", type = "time" })
+                @Html.ValidationMessageFor(t => t.TimeofIncident, "", new { @class = "txt-danger" })
+            </div>
+        </div>
+        <br />
+
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Weather Condition</label>
+            </div>
+            <div class="col-3">
+                @Html.DropDownListFor(t => t.WeatherConditionId, Model.WeatherCondition, "--Select--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(t => t.WeatherCondition, "", new { @class = "txt-danger" })
+            </div>
+            <div class="col-form-label col-2">
+                <label>Time of Day</label>
+            </div>
+            <div class="col-3">
+                @Html.DropDownListFor(t => t.TimeofDayId, Model.TimeofDay, "--Select--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(t => t.TimeofDayId, "", new { @class = "txt-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Fire or Explosion</label>
+            </div>
+            <div class="col-3">
+                @Html.DropDownListFor(t => t.FireorExplosion, Model.YesNoList, "--Select--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(t => t.FireorExplosion, "", new { @class = "txt-danger" })
+            </div>
+             
+        </div>
+        <br />
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Loss Category</label>
+            </div>
+            <div class="col-3">
+                @Html.DropDownListFor(t => t.LossCategory, Model.YesNoList, "--Select--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(t => t.LossCategoryId, "", new { @class = "txt-danger" })
+            </div>
+
+        </div>
+        <br />
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Accident Type</label>
+            </div>
+            <div class="col-3">
+                @Html.DropDownListFor(t => t.AccidentTypeId, Model.AccidentType, "--Select--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(t => t.AccidentTypeId, "", new { @class = "txt-danger" })
+            </div>
+
+        </div>
+        <br />
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Accident Description</label>
+            </div>
+            <div class="col-3">
+                @Html.TextAreaFor(t => t.AccidentDescription, 3, 5, new { @class = "form-control" })
+                @Html.ValidationMessageFor(t => t.AccidentDescription, "", new { @class = "txt-danger" })
+            </div>
+
+        </div>
+    </div>
+    <hr />
+    <h4>Location</h4>
+    <hr />
+
+    <div>
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>TPA Location Code</label>
+            </div>
+            <div class="col-3">
+                @Html.TextBoxFor(t => t.TPALocationcode, new { @class = "form-control" })
+                @Html.ValidationMessageFor(t => t.TPALocationcode, "", new { @class = "txt-danger" })
+            </div>
+            <div class="col-1">
+                <button id="search-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#costCenterSearchModal">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+        </div>
+        <br />
+
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Incident Location</label>
+            </div>
+            <div class="col-3">
+                @Html.DropDownListFor(t => t.LocationId, Model.IncidentLocation, "--Select--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(t => t.LocationId, "", new { @class = "txt-danger" })
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr />
+
+    <h4>Witness</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Associate's Witness(es)</label>
+        </div>
+        <div class="col-4">
+            @Html.TextAreaFor(t => t.AssociateWitness, 3, 5, new { @class = "form-control" })
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" style="background-color:darkgray" data-target="#associateSearchModal" data-toggle="modal">Add</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray">Delete</button>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Non-Associate's Witness(es)</label>
+        </div>
+        <div class="col-4">
+
+            @Html.TextAreaFor(t => t.NonAssociateWitness, 3, 5, new { @class = "form-control" })
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" style="background-color:darkgray" data-target="#CartDamageModal" data-toggle="modal" id="btnnonassociatewitnessAdd">Add</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray">Edit</button>
+            <button type="button" class="btn btn-primary" style="background-color:darkgray">Delete</button>
+        </div>
+    </div>
+    <hr />
+    <br />
+
+    <div class="form-row" style="justify-content:center">
+        <div class="col-1">
+            <input type="submit" value="Submit" class="btn btn-primary btn-success" />
+        </div>
+        <div class="col-1">
+            <input type="submit" value="Cancel" class="btn btn-secondary btn-info" style="background-color:darkgray">
+        </div>
+    </div>
+    @{
+        //await Html.RenderPartialAsync("Dialogs/_CartDamagePIPartial", Model.CartDamageModel);
+        // await Html.RenderPartialAsync("Dialogs/_AssociateSearchPartial");
+    }
+
+</div>
+
+}
+@*<script src="~/js/cartdamage.js"></script>
+<script src="~/js/DamageCommon.js"></script>*@
+<script>
+
+   /* $(document).ready(function () { $(".otherdiv").hide(); });*/
+
+</script>
