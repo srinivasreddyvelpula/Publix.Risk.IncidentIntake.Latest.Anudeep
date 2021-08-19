@@ -1,0 +1,467 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="~/js/associateinjury.js"></script>
+<h2>Incident Intake- Customer Incident</h2>
+<br />
+<div class="alert alert-warning" role="alert">
+    <strong style="color:burlywood;font-family:Arial;align-content:center">This report is prepared in anticipation of litigation and is privileged and confidential information. Do not share with the customer or anyone outside of publix without authorization from Risk Management.</strong>
+</div>
+<br />
+<form>
+    <h4>Primary Customer Invloved</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-1">
+            <label>Name</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" style="background-color:gray" data-toggle="modal" data-target="#personInvlovedModal">Add</button>
+            <button type="button" class="btn btn-primary" style="background-color:gray" data-toggle="modal" data-target="#injuredAssociateModal">Edit</button>
+            <button type="button" class="btn btn-primary" style="background-color:gray" data-toggle="modal" data-target="#injuredAssociateDeleteModal">Delete</button>
+        </div>
+    </div>
+    <hr />
+    <br />
+    <h4>Person Completing Form</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-1">
+            <label>PERNR</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="PERNR">
+        </div>
+        <div class="col-1">
+            <button id="search-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#associateSearchModal">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="col-form-label col-1">
+            <label>Name</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <hr />
+    <br />
+    <h4>Manager Incident Reported To</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-1">
+            <label>PERNR</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="PERNR">
+        </div>
+        <div class="col-1">
+            <button id="search-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#associateSearchModal">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="col-form-label col-1">
+            <label>Name</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-form-label col-1">
+            <label>Date Reported</label>
+        </div>
+        <div class="col-3">
+            <input type="date" class="form-control" placeholder="PERNR">
+        </div>
+        <div class="col-1">
+
+        </div>
+        <div class="col-form-label col-1">
+            <label>Time Reported</label>
+        </div>
+        <div class="col-3">
+            <input type="time" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <hr />
+    <br />
+    <h4>Location</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Location Type</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="incidentLocation" class="form-control">
+                <option value="">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Cost Center #</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Search..">
+        </div>
+        <div class="col-1">
+            <button id="search-button" type="button" class="btn btn-primary" data-target="#locationSearchModal" data-toggle="modal">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="col-4">
+            <span>Use 1 + the 4-Digit Store # for Stores</span>
+        </div>
+    </div>
+    <br />
+    <div id="incidentLocationDrpdwnNo">
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Location Name</label>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Location Name">
+            </div>
+        </div>
+        <br />
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Address 1</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Address 1">
+            </div>
+            <div class="col-1">
+
+            </div>
+            <div class="col-form-label col-2">
+                <label>Address 2</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Address 2">
+            </div>
+        </div>
+        <br />
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>City</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="City">
+            </div>
+            <div class="col-1">
+
+            </div>
+            <div class="col-form-label col-2">
+                <label>State</label>
+            </div>
+            <div class="col-3">
+                <select name="location" id="state" class="form-control">
+                    <option value="">--SELECT--</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+        <br />
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>zip</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Zip">
+            </div>
+        </div>
+        <br />
+    </div>
+    <hr />
+    <br />
+    <h4>Incident Details</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Date Of Incident</label>
+        </div>
+        <div class="col-3">
+            <input type="date" class="form-control" placeholder="PERNR">
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Time Of Incident</label>
+        </div>
+        <div class="col-3">
+            <input type="time" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Customer's Description Of Incident</label>
+        </div>
+        <div class="col-4">
+            <textarea class="form-control" rows="3">Type here..</textarea>
+        </div>
+        <div class="col-form-label col-2">
+            <label>(Note: 500 char limit.)</label>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Manager Agrees with the Description</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Any reason why Publix should not pay this claim?</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>First Aid and/or Assistenace Provided?</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Whether Condition</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Caution cones/signs Present</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Inside/Outside Building</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Estimated Time Between Incident and Inspection</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control">
+        </div>
+        <div class="col-3">
+            <span>(Minutes)</span>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Last Inspected By PERNR</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Search..">
+        </div>
+        <div class="col-1">
+            <button id="search-button" type="button" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="col-form-label col-1">
+            <label>Name</label>
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="Name" disabled="disabled">
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Vendor Invloved?</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="vendorInvlovedDrpdwn" class="form-control">
+                <option value="">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div id="vendorInvolved">
+        <div class="form-row">
+            <div class="col-form-label col-2">
+                <label>Vendor</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Vendor">
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-primary" style="background-color:gray" data-toggle="modal" data-target="#vendorInvlovedModal">Add</button>
+                <button type="button" class="btn btn-primary" style="background-color:gray" data-toggle="modal" data-target="#injuredAssociateModal">Edit</button>
+                <button type="button" class="btn btn-primary" style="background-color:gray" data-toggle="modal" data-target="#injuredAssociateDeleteModal">Delete</button>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Did Report a Fall?</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Type of Incident</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <h4>Witness</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Associate's Witness(es)</label>
+        </div>
+        <div class="col-4">
+            <textarea class="form-control" rows="3">Type here..</textarea>
+        </div>
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" style="background-color:gray">Add</button>
+            <button type="button" class="btn btn-primary" style="background-color:gray">Delete</button>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h4>Evidence</h4>
+    <hr />
+    <div class="form-row">
+        <div class="col-form-label col-12">
+            <label><strong>Reminder:</strong>Please follow standards outlined in the Cutsomer Service and Store Operation Section of the retail MRL regarding video</label>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Incident area covered by Vedio?</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-form-label col-2">
+            <label>Photo Taken?</label>
+        </div>
+        <div class="col-2">
+            <select name="location" id="yesorno" class="form-control">
+                <option value="volvo">--SELECT--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+    </div>
+    <hr />
+    <br />
+    <div class="form-row" style="justify-content:center">
+        <div class="col-1">
+            <input type="submit" value="Submit" class="btn btn-primary btn-success" />
+        </div>
+        <div class="col-1">
+            <input type="submit" value="Cancel" class="btn btn-secondary btn-info" style="background-color:darkgray">
+        </div>
+    </div>
+</form>
+@{
+    Html.RenderPartial("~/Views/Shared/Dialogs/_InjuredAssociatePartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_InjuredAssociateDeletePartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_VendorInvlovedPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_CodeSearchResultPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_EquipmentPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_ChemicalPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_OtherAssociatesPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_NonAssociatesInvlovedPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_NonAssociatesWitnessPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_LocationSearchResultPartial.cshtml");
+    //Html.Partial("~/Views/Shared/Dialogs/_LocationSearchResultPartial.cshtml", Model.LocationSearchViewModel);
+    Html.RenderPartial("~/Views/Shared/Dialogs/_LocationSearchPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_AssociateSearchPartial.cshtml");
+    Html.RenderPartial("~/Views/Shared/Dialogs/_CustomerIncidentPersonInvloved.cshtml");
+}
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
